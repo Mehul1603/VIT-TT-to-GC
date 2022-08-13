@@ -52,4 +52,11 @@ for i in range(number_of_courses):
     courses += [[name, slot, location]]
     x+=31
 
-print(courses)
+
+from datetime import datetime, timedelta
+d = datetime.now()
+tomorrow = datetime(d.year, d.month, d.day, 10)+timedelta(days=1)
+start = tomorrow.isoformat()
+end = (tomorrow + timedelta(hours=1)).isoformat()
+
+print(end)
